@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #faf8f5;
+    color: #1c1917;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', serif;
+  }
+}
+
+@layer components {
+  .gold-gradient {
+    background: linear-gradient(135deg, #d4821f 0%, #f3c978 50%, #d4821f 100%);
+  }
+
+  .gold-text {
+    background: linear-gradient(135deg, #b06819 0%, #e59a2e 50%, #b06819 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .luxury-shadow {
+    box-shadow: 0 25px 50px -12px rgba(180, 114, 25, 0.15);
+  }
+
+  .glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(212, 130, 31, 0.1);
+  }
+
+  .btn-gold {
+    background: linear-gradient(135deg, #d4821f 0%, #f3c978 50%, #d4821f 100%);
+    color: white;
+    transition: all 0.3s ease;
+  }
+
+  .btn-gold:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(212, 130, 31, 0.4);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .mobile-safe-container {
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
+  }
+
+  .telegram-safe-bottom {
+    padding-bottom: max(1.5rem, env(safe-area-inset-bottom));
+  }
+}
